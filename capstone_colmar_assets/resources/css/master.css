@@ -1,0 +1,586 @@
+/* Universal Styles */
+
+html  {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: black;
+  color: white;
+}
+
+.image-container, .video-container {
+  overflow: hidden;
+}
+
+.image-container img  {
+  display: block;
+  max-width: 100%;
+}
+
+.video-container  video {
+  display: block;
+  max-width: 100%;
+}
+
+.boldText {
+  font-weight: bolder;
+}
+
+.blueText {
+  color: rgb(51, 144, 229);
+}
+
+.grayText {
+  color: #828282;
+}
+
+h1  {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+h2  {
+  font-size: 2.5rem;
+  font-weight: bolder;
+}
+
+h3  {
+  font-size: 1.10rem;
+  font-weight: bold;
+}
+
+/* Main content realignment for fixed header */
+/* Important to ensure entire page and its contents are
+  adjusted to the fixed header */
+.main-content {
+  position: relative;
+  top: 5rem;
+}
+
+@media only screen and (max-width: 520px) {
+  .main-content {
+    top: 4rem;
+  }
+}
+/* End of repositioning of main-content for fixed header */
+
+/* Header strip fixed to top of page */
+header  {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  border-bottom: solid 1px #c6c1c1;
+  background-color: white;
+}
+
+header .content {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+header .logo {
+  background-image: url('../images/ic-logo.svg');
+  background-repeat: no-repeat;
+  display: block;
+  padding-left: 1.8rem;
+  height: 2rem;
+  line-height: 2;
+  flex: 1;
+}
+
+header nav ul {
+  display: flex;
+  font-size: 1.2rem;
+  font-family: "Roboto-Regular";
+  color: #4a4a4a;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+nav li {
+  padding-left: 1.0rem;
+}
+
+nav a {
+  vertical-align: bottom;
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #4a4a4a;
+}
+
+header .mobile  {
+  display: none;
+}
+
+@media only screen and (max-width: 520px) {
+  header .desktop {
+    display: none;
+  }
+
+  header .mobile  {
+    display: block;
+    width: 100%;
+  }
+
+  header  .content  {
+    padding: 1rem 0;
+  }
+
+  header  .mobile ul  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header  .mobile li  {
+    padding: 0;
+    line-height: 1;
+  }
+}
+/* End of Fixed Header */
+
+/* Features Banner */
+#features  {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  background-color: #d9d9d9;
+}
+
+#features .container  {
+  padding: 0 1.5rem 0 1.5rem;
+  justify-content: space-around;
+}
+
+#features .home.container {
+  width: 60%;
+}
+
+#features .image-container  {
+  margin: auto;
+}
+
+#features .intro.container  {
+  width: 40%;
+  margin: auto;
+}
+
+#features .content {
+  margin-left: 1rem;
+  width: 80%;
+}
+
+#features span  {
+  line-height: 1.3;
+  font-size: 1.5rem
+}
+
+#features h1 {
+  line-height: 1.2;
+  padding-bottom: 1.5rem;
+}
+
+#features .button {
+  margin-top: 1.5rem;
+  padding: .5rem;
+}
+
+@media only screen and (max-width: 520px) {
+  #features {
+    flex-flow: column;
+    padding: 0;
+    width: 100%;
+  }
+
+  #features .home.container  {
+    width: 100%;
+    padding: 0;
+  }
+
+  #features .image-container  {
+    height: auto;
+  }
+
+  #features .intro.container  {
+    display: flex;
+    width: auto;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+
+  #features .content  {
+    margin: auto;
+    width: auto;
+  }
+
+  #features .button {
+    background-color: #828282;
+  }
+
+  #features h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* General/Information section */
+#information  {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+#information .container {
+  margin: 0 1.5rem 0 1.5rem;
+  justify-content: space-around;
+}
+
+#information  .general.container  {
+  width: 60%;
+}
+
+#information  .image-container  {
+  margin: auto;
+}
+
+#information  .general.container .content  {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+}
+
+#information  h2  {
+  margin-bottom: 1.5rem;
+}
+
+#information  .general.container  p {
+  margin-top: 1.5rem;
+}
+
+#information .information .image-container  {
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+  padding: 0;
+}
+
+#information .Orientation .image-container  {
+  margin-top: 0;
+}
+
+#information .information.container {
+  width: 40%;
+}
+
+#information  .box  {
+  display: flex;
+}
+
+#information .box .content{
+  display: block;
+  margin: auto;
+  padding-top: auto;
+  padding-right: 1rem;
+  width: 65%;
+}
+
+#information  .box  .content  h3, p, a  {
+  margin: 0.5rem auto;
+  line-height: 1.2;
+}
+
+#information .guest {
+  background-color: #d9d9d9;
+}
+
+#information  .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 520px) {
+  #information  {
+    flex-flow: column;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+    width: 100%;
+  }
+
+  #information  .container  {
+    padding: 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  #information  .desktop, .general, .images-container  {
+    display: none;
+  }
+
+  #information  .information.container  {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #information  .box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #information  .mobile {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  #information  .box .content  {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  #information  .images-container {
+    width: auto;
+    margin: 1rem;
+    padding: 0;
+    height: auto;
+  }
+
+  #information  img {
+    width: 100%;
+    margin: auto;
+    padding: auto;
+  }
+
+  #information  .box  .content  h3, p, a  {
+    margin: 0 2rem;
+    line-height: 1.5;
+  }
+
+  #information .guest {
+    background-color: white;
+  }
+
+}
+
+/* Courses Section */
+#courses  {
+  padding: 1rem 3.5rem;
+  padding-bottom: 2rem;
+  background-color: #d9d9d9;
+}
+
+#courses  .center  {
+  padding: 1rem 0;
+}
+
+#courses  .courses-container  {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#courses  .course   {
+  margin: 1rem;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  width: 20rem;
+}
+
+#courses  .image-container  {
+  width: auto;
+  height: auto;
+}
+
+#courses  .courses-container  .content  {
+  padding: 1rem;
+}
+
+#courses  p{
+  margin-left: 0;
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 520px)  {
+  #courses  {
+    background-color: white;
+    margin: 0;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  #courses  .desktop  {
+    display: none;
+  }
+
+  #courses  .course   {
+    margin: 0.5rem auto;
+  }
+
+  #courses  .courses-container  p {
+    display: none;
+  }
+
+  #courses  .courses-container  {
+    margin: 0;
+    padding: 0;
+  }
+
+  #courses  .courses-container .content  {
+    border-radius: 4px;
+    background-color: #d9d9d9;
+    margin: 0;
+  }
+
+  #courses  .content  {
+    margin: auto;
+  }
+}
+
+/* Exhibit section */
+#exhibit  {
+  margin: 2rem 1.5rem;
+  padding: auto;
+}
+
+#exhibit  .content.center h2  {
+  display: block;
+  padding-bottom: 2rem;
+}
+
+.exhibit-section  {
+  display: flex;
+  justify-content: space-between;
+}
+
+#exhibit  .container {
+  display: inline-block;
+  width: auto;
+  justify-content: space-between;
+}
+
+#exhibit  .clip.container {
+  width: 60%;
+  padding-right: 0.75rem;
+}
+
+#exhibit  .clip .desktop.image-container  {
+  margin: auto;
+}
+
+#exhibit  .clip .content  {
+  padding-top: 1.5rem;
+}
+
+#exhibit  .clip h3  p {
+  line-height: 1.2;
+}
+
+#exhibit  .clip p {
+  margin-left: 0;
+  padding-top: 0.5rem;
+}
+
+#exhibit  .samples.container  {
+  display: inline-block;
+  width: 40%;
+  padding-left: 0.75rem;
+}
+
+#exhibit  .samples .box {
+  display: flex;
+  margin: auto;
+}
+
+#exhibit  .samples  .desktop.image-container  {
+  width: 35%;
+  height: auto;
+  margin: 1rem;
+  padding: 0;
+}
+
+#exhibit  .fisma  {
+  background-color: #d9d9d9;
+}
+
+#exhibit  .samples .content {
+  display: block;
+  margin: auto;
+  padding-top: auto;
+  padding-right: 1rem;
+  width: 65%;
+}
+
+@media only screen and (max-width: 520px) {
+  #exhibit  {
+    display: block;
+    justify-content: center;
+    margin: auto 0 1.5rem 0;
+  }
+
+  #exhibit  .samples.container  {
+    display: none;
+  }
+
+  #exhibit  .clip .content  {
+    display: none;
+  }
+
+  #exhibit .content.center h2 {
+    padding-bottom: 1rem;
+  }
+
+  .exhibit-section  {
+    display: block;
+    margin: auto 0;
+  }
+
+  #exhibit  .clip.container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+}
+
+/* Footer section */
+footer  {
+  padding: 1rem 1.5rem;
+}
+
+footer  .footing  {
+  display: flex;
+  font-size: 0.75rem;
+  font-weight: lighter;
+}
+
+footer  .copyright  {
+  flex-grow: 1;
+  padding-top: .5rem;
+}
+
+footer  a {
+  flex-grow: 1;
+}
+
+footer  li  {
+  display: inline-flex;
+  padding-left: 0.5rem;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 520px) {
+  footer  .legal  {
+    display: none;
+  }
+}
